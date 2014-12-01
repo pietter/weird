@@ -50,9 +50,9 @@ public class main {
 			//tu sie liczy pochodna
 			for(int i=(nowe_wspol.length-1),j=stopien-k;	i>=0;	i--,j--){
 				//System.out.println("krece sie " + (i+1) + " raz ");					
-				System.out.println("j = "+ j);
+				//System.out.println("j = "+ j);
 				
-				System.out.println("wspo i+1 ="+ (wspolczynniki[i+1]));
+				//System.out.println("wspo i+1 ="+ (wspolczynniki[i+1]));
 				
 				//pom[j]=wspolczynniki[j]*(stopien-i);		
 				nowe_wspol[i]=wspolczynniki[i+1]*j;
@@ -61,15 +61,19 @@ public class main {
 			/*---------------------------------------------------------------------
 			k+1 ponieważ nie ma pochodnej 0 stopnia :P a przynajmniej wiecie ocb.*/
 			
-			//System.out.println((k+1)+ " pochodna = ");
-			System.out.println("wspolczynniki przy potegach :");
+			System.out.println((k+1)+ " pochodna :");
+			//System.out.println("wspolczynniki przy potegach :");
 			//przypisanie do oryginalnej tablicy wartosci z tablicy pomocniczej
 			//wspolczynniki=pom;
 			
 			//ponowne druknij wielomian z mala modyfikacja
 			for(int i=(nowe_wspol.length-1);i>=0;i--){				
-				System.out.print("[ "+ nowe_wspol[i]+ " ]");
-				//System.out.print(pom[i] +"x^" + (i-k)+ " +");							
+				//System.out.print("[ "+ nowe_wspol[i]+ " ]");
+				System.out.print(nowe_wspol[i] +"x^" + i);							
+				
+				if(i>0){
+					System.out.print(" + ");
+				}
 				
 			}
 			System.out.println();
